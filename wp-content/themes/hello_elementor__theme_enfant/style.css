@@ -1,0 +1,280 @@
+/* 
+Theme Name: Hello Elementor Child
+Theme URI: https://github.com/elementor/hello-theme-child/
+Description: Hello Elementor Child is a child theme of Hello Elementor, created by Elementor team
+Author: Elementor Team
+Author URI: https://elementor.com/
+Template: hello-elementor
+Version: 2.0.0
+Text Domain: hello-elementor-child
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/* Add your custom styles here */
+
+
+/* Ci-dessous CSS additionnel */
+
+
+/* Général */
+
+*{
+    margin:0;
+}
+
+
+/* Header */
+
+.site-header {
+    padding-inline-end:0 !important;
+    padding-inline-start: 37px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+} 
+
+.header-inner {
+    height: 80px;
+} 
+
+.menu-item-717 a,
+.menu-item-716 a,
+#menu-item-477 a {  
+    padding: 28px 15px !important;
+}  
+
+#menu-item-477 a {
+    width: 140px;
+}
+
+.menu-item-717 a,
+#menu-item-477 a{
+    color: #000000;
+    text-align: center;
+} 
+
+.menu-item-717 a:hover,
+.menu-item-717 a:visited,
+#menu-item-477 a:hover
+ {
+    position: relative;
+    bottom: 1px;
+    left: 1px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.menu-item-716 a{
+    color: #FFFFFF !important;
+    background-color: #DC9F96;
+    height: 80px;
+    width: 236px;
+    text-align: center;
+}
+.menu-item-716 a:hover {
+    background-color: #C02E44;
+    transition:all 0.2s ease;
+}
+
+
+/* Page "Nous rencontrer" */
+
+/* Formulaire de contact */
+
+.wpcf7-form.init label {
+    font-family: 'Syne'; 
+    font-size: 20px;
+    line-height: 2; 
+}
+
+.wpcf7-form-control-wrap input {
+    height: 71px;
+    border-radius: 7px;
+}
+
+.wpcf7-form-control-wrap textarea {
+    height: 237px;
+    width: 373px;
+    border-radius: 7px;
+}
+
+.wpcf7-submit {
+    width: 198px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border-radius: 7px;
+}
+
+.wpcf7-form.init p input :hover {
+    transition:all 0.2s ease;
+}
+
+
+/* Page "Commander" */
+
+/* Formulaire de Précommande */
+
+#form_pre_commande {
+    font-family: 'Syne';
+    color: #FFFFFF;
+}
+
+#form_pre_commande h3 {
+    font-size: 30px;
+}
+
+#informations_livraison label {
+    font-size: 20px;
+    line-height: 2;
+}
+
+#informations_livraison input {
+    height: 71px;
+    border-radius: 7px;
+}
+
+#envoyer {
+    width:198px;
+    margin: auto;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+#envoyer :hover {
+    transition:all 0.2s ease;
+}
+
+#informations_livraison {
+    width: 860px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#vos_informations,
+#livraison {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+#vos_informations {
+    border-right: 1px solid #FFFFFF;
+}
+
+#livraison {
+    padding-left: 60px;
+    padding-right:10px;
+}
+
+
+/* Footer */
+
+footer p {
+    font-family: 'Syne';
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+}
+
+.site-footer {
+    padding-block-end: 0!important;
+}
+
+
+/* Responsive */
+
+/* Responsive Tablette */
+
+@media screen and (max-width: 768px) {
+    /* Header */
+    .site-header {
+        padding-inline-start: 15px !important;
+    } 
+    #menu-menu-header {
+        font-family: 'Syne' !important;
+    }
+    .menu-item-717 a,
+    #menu-item-477 a {
+        color:#000000 !important;
+    }
+    #menu-item-477 a {
+        width: 768px;
+        height: 80px;
+        text-align: center !important;
+    }
+    .menu-item-717 a:hover,
+    #menu-item-477 a:hover {
+        color: #DC9F96 !important;
+    }
+    .menu-item-716 a{
+        background-color: #DC9F96 !important;
+        height: 80px;
+        width: 768px;
+        text-align: center;
+    }
+    .menu-item-716 a:hover{
+        background-color: #C02E44 !important;
+    }
+    .site-navigation-dropdown ul.menu li.current-menu-item a {
+        color:#FFFFFF !important;
+    }
+    /* Page "Commander" Formulaire */
+    #informations_livraison {
+        width: 740px;
+    }
+    #livraison {
+        padding-left: 10px;
+    }
+    #vos_informations {
+        padding-right: 10px;
+    }    
+}
+
+/* Responsive Mobile */
+
+@media screen and (max-width: 320px) {
+    /* Header */
+    .site-header {
+        padding-inline-start: 15px !important;
+    } 
+    #menu-item-477 a,
+    .menu-item-716 a {
+        width: 320px;
+    }
+    /* Page "Nous rencontrer" L'Equipe */
+    .wp-image-310 {
+        padding-top: 130px;
+    }
+    /* Page "Nous rencontrer" Formulaire */
+    .wpcf7-form-control-wrap textarea {
+        width: 300px;
+    }
+    /* Page "Commander" Formulaire */
+    #informations_livraison {
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #vos_informations {
+        border-right: none;
+        border-bottom: 1px solid #FFFFFF;
+        padding-bottom: 30px;
+    }
+    #livraison {
+        padding-top: 30px;
+        padding-left: 0 !important;
+    }
+    #vos_informations,
+    #livraison {
+        padding-right: 0 !important;
+    }
+}

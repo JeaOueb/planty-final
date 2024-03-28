@@ -36,15 +36,16 @@ function hello_elementor_child_scripts_styles() {
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_scripts_styles', 20 );
 
 
-// Création d'un lien "Admin" dans le menu de navigation du header, qui n'est affiché que lorsque l'utilisateur est connecté sur WordPress Admin, en utilisant un hook
+// Création d'un lien "Admin" dans le menu de navigation du header, qui n'est affiché que lorsque l'utilisateur est connecté sur WordPress Admin, entre le lien Nous rencontrer et le lien "Commander", grâce à un hook
 
-function add_admin_item_to_nav_menu($items, $args)
+// Fonction qui permet d'ajouter l'élément Admin au menu de navigation
+function add_admin_item_to_nav_menu($items, $args) 
 {
     if (is_user_logged_in() && $args->theme_location == 'menu-1') {
-        // Créer le nouvel élément de menu
+        // Créer le nouvel élément de menu, si l'utilisateur est connecté
         $new_item = '<li id="menu-item-477"><a href="/planty/wp-admin/"><span>Admin</span></a></li>';
 
-        // Initialiser un compteur
+        // Initialiser un compteur qui compte les éléments du menu (0=1er élément)
         $counter = 0;
 
         // Parcourir les éléments du menu existant
@@ -62,8 +63,9 @@ function add_admin_item_to_nav_menu($items, $args)
         // Joindre les éléments du menu dans une seule chaîne
         $items = implode('', $menu_items);
     }
+    //  les éléments de menu modifiés sont renvoyés pour être affichés dans le menu de navigation
     return $items;
 }
-
+// cette fonction sera appelée chaque fois que les éléments de menu sont générés dans WordPress, permettant ainsi de modifier dynamiquement les éléments du menu
 add_filter('wp_nav_menu_items', 'add_admin_item_to_nav_menu', 10, 2);
 
